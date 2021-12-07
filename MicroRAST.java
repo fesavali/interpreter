@@ -6,7 +6,7 @@
 public class MicroRAST {
 
   public static void main (String args []) throws java.io.IOException {
-    System . out . println ("Source Program");
+    System . out . println ("MyInterpreter.java");
     System . out . println ("--------------");
     System . out . println ();
 
