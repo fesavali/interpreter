@@ -81,9 +81,9 @@ public class MyInterpreter {
                    Expression b;
                    Expression se;
                    Token t;
-            
+            //iterate over values
                    t = lt.nextToken();
-                   if (! t.isSymbol('(')) {
+                   if (! t.isSymbol('')) {
                       if (ty == RND) {
                           lt.unGetToken();
                           return new FunctionExpression(ty, new ConstantExpression(1));
@@ -93,6 +93,7 @@ public class MyInterpreter {
                       }
                       throw new BASICSyntaxError("Missing argument for function.");
                   }
+                  //switch case
                   switch (ty) {
                       case RND:
                       case INT:
