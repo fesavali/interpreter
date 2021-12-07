@@ -1,4 +1,6 @@
 public class MyInterpreter {
+    ErrorMessage message = new ErrorMessage();
+   
     class Expression {
         Expression arg1, arg2;
         int oper;
@@ -38,7 +40,7 @@ public class MyInterpreter {
                 return arg1.value(pgm) + arg2.value(pgm);
             case OP_SUB :
                 return arg1.value(pgm) - arg2.value(pgm);
-    ... etc for all of the other operator types. ...
+    //... etc for all of the other operator types. ...
 
     class ConstantExpression extends Expression {
         private double v;
@@ -51,7 +53,7 @@ public class MyInterpreter {
         }
     }
  class FunctionExpression extends Expression {
-    [ ... parsing stuff removed ...]
+    //[ ... parsing stuff removed ...]
    double value(Program p) throws BASICRuntimeError {
              try {
                     switch (oper) {
@@ -63,7 +65,7 @@ public class MyInterpreter {
                            return Math.floor(arg2.value(p));
                        case SIN :
                            return Math.sin(arg2.value(p));
-           [ ... and so on for all of the functions implemented ... ]
+           //[ ... and so on for all of the functions implemented ... ]
                        default :
                            throw new BASICRuntimeError("Unknown or non-numeric function.");
                   }
@@ -115,14 +117,14 @@ public class MyInterpreter {
                               throw new BASICSyntaxError(functions[ty].toUpperCase()+" requires a string valued argument.");
                           result = new FunctionExpression(ty, a);
                           break;
-                  [ ... other cases omitted for brevity ... ]
+                  //[ ... other cases omitted for brevity ... ]
                       default:
-                          throw new BASICSyntaxError("Unknown function on input.");
+                          throw new BASICSyntaxError(ErrorMessage message = new ErrorMessage(););
            
                   }
                   t = lt.nextToken();
                   if (! t.isSymbol(')')) {
-                      throw new BASICSyntaxError("Missing closing parenthesis for function.");
+                      throw new BASICSyntaxError(ErrorMessage message = new ErrorMessage(););
                   }
                   return result;
               }
