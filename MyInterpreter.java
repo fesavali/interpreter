@@ -1,6 +1,5 @@
 public class MyInterpreter {
-    ErrorMessage message = new ErrorMessage();
-   
+    ErrorMessage message = new ErrorMessage(); 
     class Expression {
         Expression arg1, arg2;
         int oper;
@@ -10,7 +9,7 @@ public class MyInterpreter {
         final static int OP_DIV  = 4;   // Division '/'
         final static int OP_BNOT = 19;  // Boolean negation '.NOT.'
         final static int OP_NEG  = 20;  // Unary minus
-    protected Expression(int op, Expression a, Expression b) throws BASICSyntaxError {
+         protected Expression(int op, Expression a, Expression b) throws BASICSyntaxError {
             arg1 = a;
             arg2 = b;
             oper = op;
@@ -129,7 +128,9 @@ public class MyInterpreter {
                   return result;
               }
 
+                    }
+                }
+            }
+        }
+    }
 }
-}
-}
-
