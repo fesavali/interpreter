@@ -17,7 +17,7 @@ public class MyInterpreter {
             /*
              * If the operator is a boolean, both arguments must be boolean.
              */
-            if (op > OP_GE) {
+            if (op > OP_ADD) {
                 if ( (! (arg1 instanceof BooleanExpression)) ||
                      (! (arg2 instanceof BooleanExpression)) )
                     throw new BASICSyntaxError(typeError);
@@ -33,7 +33,7 @@ public class MyInterpreter {
                 throw new BASICSyntaxError(typeError);
         }
     
-    }
+    
     double value(Program pgm) throws BASICRuntimeError {
         switch (oper) {
             case OP_ADD :
@@ -51,7 +51,7 @@ public class MyInterpreter {
         double value(Program pgm) throws BASICRuntimeError {
             return v;
         }
-    }
+    
  class FunctionExpression extends Expression {
     //[ ... parsing stuff removed ...]
    double value(Program p) throws BASICRuntimeError {
@@ -130,3 +130,6 @@ public class MyInterpreter {
               }
 
 }
+}
+}
+
