@@ -26,6 +26,7 @@ public class MyInterpreter {
                     throw new BASICSyntaxError(typeError);
             }
         }
+        //expression syntax 
         protected Expression(int op, Expression a) throws BASICSyntaxError {
             arg2 = a;
             oper = op;
@@ -33,8 +34,8 @@ public class MyInterpreter {
                 throw new BASICSyntaxError(typeError);
         }
     
-    
-    double value(Program pgm) throws BASICRuntimeError {
+    //handle double values 
+        double value(Program pgm) throws BASICRuntimeError {
         switch (oper) {
             case OP_ADD :
                 return arg1.value(pgm) + arg2.value(pgm);
