@@ -4,7 +4,11 @@
 public class ErrorMessage {
 
   public static void print (String message) {
-    System . out . println ("***** Error: " + message + " *****");
+    System . out . println ("***** Error: " + message + "Missing closing parenthesis for function.");
+    System . exit (0);
+  }
+  public static void print1 (String message) {
+    System . out . println ("***** Error: " + message + "Unknown function on input.");
     System . exit (0);
   }
 
