@@ -1,4 +1,5 @@
 public class MyInterpreter {
+    //call the errormessage class
     ErrorMessage message = new ErrorMessage(); 
     class Expression {
         Expression arg1, arg2;
@@ -51,8 +52,8 @@ public class MyInterpreter {
             return v;
         }
     
- class FunctionExpression extends Expression {
-    //[ ... parsing stuff removed ...]
+   class FunctionExpression extends Expression {
+    //[ ... parsing stuff removed ...]//
    double value(Program p) throws BASICRuntimeError {
              try {
                     switch (oper) {
