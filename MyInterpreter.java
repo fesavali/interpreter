@@ -32,7 +32,7 @@ public class MyInterpreter {
             oper = op;
             if ((oper == OP_BNOT) && (! (arg2 instanceof BooleanExpression)))
                 throw new BASICSyntaxError(typeError);
-        }
+        }//1.5
     
     //handle double values 
         double value(Program pgm) throws BASICRuntimeError {
