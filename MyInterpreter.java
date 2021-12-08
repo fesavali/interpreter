@@ -26,7 +26,7 @@ public class MyInterpreter {
                     throw new BASICSyntaxError(typeError);
             }
         }
-        //expression syntax 
+        //expression syntax(int, bool & double) 
         protected Expression(int op, Expression a) throws BASICSyntaxError {
             arg2 = a;
             oper = op;
